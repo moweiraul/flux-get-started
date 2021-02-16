@@ -17,6 +17,8 @@ spec:
         k8s-app: utils-tools
         qcloud-app: utils-tools
     spec:
+      imagePullSecrets:
+      - name: tcr
       containers:
       - env:
         - name: PATH
@@ -26,7 +28,3 @@ spec:
         image: v-pmwjiang-tcr.tencentcloudcr.com/my/utils:v1
         imagePullPolicy: IfNotPresent
         name: utils-tools
-        imagePullSecrets:
-        - name: tcr
-        name: utils-tools
-
