@@ -25,5 +25,7 @@ spec:
           value: docker
         image: v-pmwjiang-tcr.tencentcloudcr.com/my/utils:v1
         imagePullPolicy: IfNotPresent
+        imagePullSecrets:
+        - name: qcloudregistrykey
         name: utils-tools
 
