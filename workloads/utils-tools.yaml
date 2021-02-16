@@ -2,30 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    k8s-app: utils-tools
-    qcloud-app: utils-tools
-  name: utils-tools
+    k8s-app: redis
+    qcloud-app: redis
+  name: redis
   namespace: default
 spec:
   selector:
     matchLabels:
-      k8s-app: utils-tools
-      qcloud-app: utils-tools
+      k8s-app: redis
+      qcloud-app: redis
   template:
     metadata:
       labels:
-        k8s-app: utils-tools
-        qcloud-app: utils-tools
+        k8s-app: redis
+        qcloud-app: redis
     spec:
-      containers:
-      - env:
-        - name: PATH
-          value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-        - name: container
-          value: docker
-        image: v-pmwjiang-tcr.tencentcloudcr.com/my/utils:v1
+        image: v-pmwjiang-tcr.tencentcloudcr.com/my/redis:latest
         imagePullPolicy: IfNotPresent
         imagePullSecrets:
         - name: qcloudregistrykey
-        name: utils-tools
+        name: redis
 
