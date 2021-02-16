@@ -20,6 +20,6 @@ spec:
         image: v-pmwjiang-tcr.tencentcloudcr.com/my/redis:latest
         imagePullPolicy: IfNotPresent
         imagePullSecrets:
-        - name: qcloudregistrykey
+        - name: tcr
         name: redis
 
