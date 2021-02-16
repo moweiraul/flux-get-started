@@ -26,5 +26,5 @@ spec:
         - name: container
           value: docker
         image: v-pmwjiang-tcr.tencentcloudcr.com/my/utils:v1
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         name: utils-tools
