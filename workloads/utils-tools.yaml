@@ -5,7 +5,7 @@ metadata:
     k8s-app: utils-tools
     qcloud-app: utils-tools
   name: utils-tools
-  namespace: default
+  namespace: test
 spec:
   selector:
     matchLabels:
